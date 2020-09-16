@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Rest API Example</string>
+    <string name="details_will_be_shown_here">Details will be shown here</string>
+    <string name="image_will_be_shown_here">Image will be shown here</string>
+</resources>

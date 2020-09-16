@@ -25,7 +25,7 @@ class CustomAdapter(val items:List<ModelClass>,val context:Context) :RecyclerVie
     }
 
     override fun onBindViewHolder(holder: CustomViewHolder, position: Int) {
-        Glide.with(context).load(items[position].url).
+        Glide.with(holder.image.context).load(items[position].url).placeholder(R.drawable.ic_cloud).
             diskCacheStrategy(DiskCacheStrategy.ALL).into(holder.image)
         holder.detail.text=items[position].title
     }

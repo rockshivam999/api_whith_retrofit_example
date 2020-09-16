@@ -1,6 +1,7 @@
 package com.example.Restapiexample.InternalLogic
 
 import android.content.Context
+import android.net.Uri
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -25,8 +26,7 @@ class CustomAdapter(val items:List<ModelClass>,val context:Context) :RecyclerVie
     }
 
     override fun onBindViewHolder(holder: CustomViewHolder, position: Int) {
-        Glide.with(holder.image.context).load(items[position].url).placeholder(R.drawable.ic_cloud).
-            diskCacheStrategy(DiskCacheStrategy.ALL).into(holder.image)
+        Glide.with(holder.image.context).load(Uri.parse(items[position].url)).placeholder(R.drawable.ic_cloud).into(holder.image)
         holder.detail.text=items[position].title
     }
 

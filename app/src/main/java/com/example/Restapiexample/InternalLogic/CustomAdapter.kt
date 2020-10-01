@@ -26,7 +26,7 @@ class CustomAdapter(val items:List<ModelClass>,val context:Context) :RecyclerVie
     }
 
     override fun onBindViewHolder(holder: CustomViewHolder, position: Int) {
-        Glide.with(holder.image.context).load(Uri.parse(items[position].url)).placeholder(R.drawable.ic_cloud).into(holder.image)
+        Glide.with(holder.image.context).load(https://source.unsplash.com/random)).placeholder(R.drawable.ic_cloud).into(holder.image)
         holder.detail.text=items[position].title
     }
 
